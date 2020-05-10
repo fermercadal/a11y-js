@@ -20,57 +20,70 @@ class App extends React.Component {
     this.state = {
       saga: {
         precuels: {
-          episode1: {
-            title: 'Star Wars: Episode I The Phantom Menace',
-            year: '1999',
-            poster: episode1
-          },
-          episode2: {
-            title: 'Star Wars: Episode II Attack of the Clones',
-            year: '2002',
-            poster: episode2
-          },
-          episode3: {
-            title: 'Star Wars: Episode III Revenge of the Sith',
-            year: '2005',
-            poster: episode3
+          title: "Prequel Trilogy",
+          episodes: {
+            episode1: {
+              title: 'Star Wars: Episode I The Phantom Menace',
+              year: '1999',
+              poster: episode1
+            },
+            episode2: {
+              title: 'Star Wars: Episode II Attack of the Clones',
+              year: '2002',
+              poster: episode2
+            },
+            episode3: {
+              title: 'Star Wars: Episode III Revenge of the Sith',
+              year: '2005',
+              poster: episode3
+            }
           }
+          
         },
         originals: {
-          episode4: {
-            title: 'Star Wars: Episode IV A New Hope',
-            year: '1977',
-            poster: episode4
-          },
-          episode5: {
-            title: 'Star Wars: Episode V The Empire Strikes Back',
-            year: '1980',
-            poster: episode5
-          },
-          episode6: {
-            title: 'Star Wars: Episode VI Return of the Jedi',
-            year: '1983',
-            poster: episode6
+          title: "Original Trilogy",
+          episodes: {
+            episode4: {
+              title: 'Star Wars: Episode IV A New Hope',
+              year: '1977',
+              poster: episode4
+            },
+            episode5: {
+              title: 'Star Wars: Episode V The Empire Strikes Back',
+              year: '1980',
+              poster: episode5
+            },
+            episode6: {
+              title: 'Star Wars: Episode VI Return of the Jedi',
+              year: '1983',
+              poster: episode6
+            }
           }
+          
         },
         sequels: {
-          episode7: {
-            title: 'Star Wars: Episode VII The Force Awakens',
-            year: '2015',
-            poster: episode7
-          },
-          episode8: {
-            title: 'Star Wars: Episode VIII The Last Jedi',
-            year: '2017',
-            poster: episode8
-          },
-          episode9: {
-            title: 'Star Wars: Episode IX The Rise of Skywalker',
-            year: '2019',
-            poster: episode9
+          title: "Sequel Trilogy",
+          episodes: {
+            episode7: {
+              title: 'Star Wars: Episode VII The Force Awakens',
+              year: '2015',
+              poster: episode7
+            },
+            episode8: {
+              title: 'Star Wars: Episode VIII The Last Jedi',
+              year: '2017',
+              poster: episode8
+            },
+            episode9: {
+              title: 'Star Wars: Episode IX The Rise of Skywalker',
+              year: '2019',
+              poster: episode9
+            }
           }
+          
         },
       },
+      currentTrilogy: 'originals',
       Side: {
         darkSide: false,
         lightSide: false
@@ -81,8 +94,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <div>A11y JS</div>
+
         <Navigation/>
-        <Trilogy/>
+        <Trilogy series={ this.state.currentTrilogy } saga={this.state.saga}/>
       </div>
     );
   }

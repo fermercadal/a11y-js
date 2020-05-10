@@ -3,13 +3,23 @@ import Movie from '../Movie/Movie';
 
 class Trilogy extends React.Component {
   render() {
+    const saga = this.props.saga;
+    const trilogy = saga[this.props.series];
+
+    const episodes = trilogy.episodes;
+    
+    
+
     return (
       <div className="Trilogy">
-        <div className="trilogy__title">Trilogy</div>
+        <div className="trilogy__title">{ trilogy.title }</div>
 
-        <Movie/>
-        <Movie/>
-        <Movie/>
+        {Object.keys(episodes).map((episode) => {
+          return(
+            <Movie data={episodes[episode]} />
+          )
+        })}
+        
       </div>
     );
   }
