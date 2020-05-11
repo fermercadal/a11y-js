@@ -1,0 +1,31 @@
+.Navigation {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 60%;
+
+  .button {
+    border-right: 2px solid #4d4646;
+    border-top: 2px solid #4d4646;
+    box-sizing: border-box;
+    flex: 1 1 auto;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: inline-block;
+    padding: 15px 45px;
+    text-align: center;
+
+    &:first-child {
+      border-left: 2px solid #4d4646;
+    }
+  }
+
+  .choose-your-side {
+  }
+
+  .choose-your-side__options {
+    background-color: red;
+    display: none;
+  }
+}
+

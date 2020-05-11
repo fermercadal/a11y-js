@@ -1,0 +1,19 @@
+.Movie {
+  background-color: #f5eaea;
+  box-shadow: -2px 2px 8px -2px  #c2baba;
+  box-sizing: border-box;
+  padding: 15px;
+  width: 31%;
+
+  .movie__poster {
+    width: 100%;
+    img {
+      max-width: 100%;
+      height: auto6
+    }
+  }
+
+  .movie__poster {
+    margin-top: 15px;
+  }
+}

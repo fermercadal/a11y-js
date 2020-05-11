@@ -1,0 +1,18 @@
+.Trilogy {
+  background-color: #faf5f5;
+  border: 2px solid #4d4646;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0px 30px 30px 30px;
+  width: 60%;
+
+  .trilogy__title {
+    color: #4d4646;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 15px 0;
+    width: 100%;
+  }
+}

@@ -1,6 +1,7 @@
 import React from 'react'
 import Navigation from './Components/Navigation/Navigation';
 import Trilogy from './Components/Trilogy/Trilogy';
+import './App.scss';
 
 import episode1 from './Images/episode1.jpg';
 import episode2 from './Images/episode2.jpg';
@@ -93,7 +94,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <div>A11y JS</div>
+        <div className="App__title">A11y JS</div>
 
         <Navigation/>
         <Trilogy series={ this.state.currentTrilogy } saga={this.state.saga}/>

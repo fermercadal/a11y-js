@@ -1,5 +1,6 @@
 import React from 'react'
 import Movie from '../Movie/Movie';
+import './Trilogy.scss';
 
 class Trilogy extends React.Component {
   render() {

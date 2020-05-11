@@ -1,0 +1,18 @@
+body {
+  background-color: #f5eaea;
+}
+
+.App {
+  
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.App__title {
+  color: #4d4646;
+  font-size: 2rem;
+  font-weight: 7600;
+  padding: 30px 0;
+  width: 60%;
+}
