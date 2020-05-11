@@ -17,7 +17,7 @@ class Trilogy extends React.Component {
 
         {Object.keys(episodes).map((episode) => {
           return(
-            <Movie data={episodes[episode]} />
+            <Movie key={episodes[episode].title} data={episodes[episode]} />
           )
         })}
         
