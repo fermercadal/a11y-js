@@ -20,21 +20,21 @@ class App extends React.Component {
 
     this.state = {
       saga: {
-        precuels: {
+        prequels: {
           title: "Prequel Trilogy",
           episodes: {
             episode1: {
-              title: 'Star Wars: Episode I The Phantom Menace',
+              title: 'Episode I The Phantom Menace',
               year: '1999',
               poster: episode1
             },
             episode2: {
-              title: 'Star Wars: Episode II Attack of the Clones',
+              title: 'Episode II Attack of the Clones',
               year: '2002',
               poster: episode2
             },
             episode3: {
-              title: 'Star Wars: Episode III Revenge of the Sith',
+              title: 'Episode III Revenge of the Sith',
               year: '2005',
               poster: episode3
             }
@@ -45,17 +45,17 @@ class App extends React.Component {
           title: "Original Trilogy",
           episodes: {
             episode4: {
-              title: 'Star Wars: Episode IV A New Hope',
+              title: 'Episode IV A New Hope',
               year: '1977',
               poster: episode4
             },
             episode5: {
-              title: 'Star Wars: Episode V The Empire Strikes Back',
+              title: 'Episode V The Empire Strikes Back',
               year: '1980',
               poster: episode5
             },
             episode6: {
-              title: 'Star Wars: Episode VI Return of the Jedi',
+              title: 'Episode VI Return of the Jedi',
               year: '1983',
               poster: episode6
             }
@@ -66,17 +66,17 @@ class App extends React.Component {
           title: "Sequel Trilogy",
           episodes: {
             episode7: {
-              title: 'Star Wars: Episode VII The Force Awakens',
+              title: 'Episode VII The Force Awakens',
               year: '2015',
               poster: episode7
             },
             episode8: {
-              title: 'Star Wars: Episode VIII The Last Jedi',
+              title: 'Episode VIII The Last Jedi',
               year: '2017',
               poster: episode8
             },
             episode9: {
-              title: 'Star Wars: Episode IX The Rise of Skywalker',
+              title: 'Episode IX The Rise of Skywalker',
               year: '2019',
               poster: episode9
             }
@@ -87,17 +87,52 @@ class App extends React.Component {
       currentTrilogy: 'originals',
       Side: {
         darkSide: false,
-        lightSide: false
+        lightSide: true
       }
     }
+
+    this.changeSide = this.changeSide.bind(this);
+    this.changeTrilogy = this.changeTrilogy.bind(this);
   }
+
+  changeSide(side) {
+    if(side === 'darkSide') {
+      this.setState({
+        Side: {
+          darkSide: true,
+          lightSide: false
+        }
+      });
+    } else {
+      this.setState({
+        Side: {
+          darkSide: false,
+          lightSide: true
+        }
+      });
+    }
+  }
+
+  changeTrilogy(trilogy) {
+    this.setState({
+      currentTrilogy: trilogy,
+    });
+  }
+
   render() {
+    const isDarkSide = this.state.Side.darkSide;
+    const isLightSide = this.state.Side.lightSide;
+
     return (
-      <div className="App">
+      <div className={`App ${isDarkSide ? 'App__dark-side' : ''} ${isLightSide ? 'App__light-side' : ''}`}>
         <div className="App__title">A11y JS</div>
 
-        <Navigation/>
-        <Trilogy series={ this.state.currentTrilogy } saga={this.state.saga}/>
+        <Navigation 
+          changeSide={ this.changeSide } 
+          changeTrilogy={ this.changeTrilogy }
+          currentTrilogy={ this.state.currentTrilogy }
+          />
+        <Trilogy series={ this.state.currentTrilogy } saga={ this.state.saga }/>
       </div>
     );
   }
