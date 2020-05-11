@@ -13,13 +13,25 @@ class Navigation extends React.Component {
   }
 
   render() {
+    const isDarkSide = this.props.currentSide.darkSide;
+    const isLightSide = this.props.currentSide.lightSide;
+
     return (
       <div className="Navigation">
         <div className="choose-your-side" onClick={() => this.openSelect()}>
-          <div className="choose-your-side__title">Choose your side:</div>
+          <div className="choose-your-side__title">Choose your side</div>
           <div className="choose-your-side__options">
-            <div className="side__dark" onClick={this.props.changeSide.bind(this, 'darkSide', false)}>Dark Side</div>
-            <div className="side__light" onClick={this.props.changeSide.bind(this, 'lightSide', false)}>Light side</div>
+            <div 
+              className={`side__dark ${isDarkSide ? 'active' : ''}`}
+              onClick={this.props.changeSide.bind(this, 'darkSide', false)}>
+                Dark Side
+            </div>
+
+            <div 
+              className={`side__light ${isLightSide  ? 'active' : ''}`}
+              onClick={this.props.changeSide.bind(this, 'lightSide', false)}>
+                Light side
+            </div>
           </div>
         </div>
 

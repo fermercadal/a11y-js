@@ -131,7 +131,9 @@ class App extends React.Component {
           changeSide={ this.changeSide } 
           changeTrilogy={ this.changeTrilogy }
           currentTrilogy={ this.state.currentTrilogy }
+          currentSide={ this.state.Side }
           />
+
         <Trilogy series={ this.state.currentTrilogy } saga={ this.state.saga }/>
       </div>
     );
