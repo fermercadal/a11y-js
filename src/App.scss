@@ -1,18 +1,43 @@
-body {
-  background-color: #f5eaea;
-}
+@import './colors';
 
 .App {
-  
+  align-items: center;
+  background-color: $light-color__secondary;
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
+  min-height: 100vh;
 }
 
 .App__title {
-  color: #4d4646;
   font-size: 2rem;
   font-weight: 600;
-  padding: 30px 0;
+  padding: 60px 0;
+  text-align: center;
   width: 80%;
+}
+
+.App__light-side {
+  &.App {
+    background-color: $light-color__primary;
+    background-image: url('./Images/light.svg');
+    background-repeat: no-repeat;
+    background-position: 105% 10% ;
+  }
+
+  .App__title {
+    color: $light-color__secondary;
+  }
+}
+
+.App__dark-side {
+  &.App {
+    background-color: $dark-color__primary;
+    background-image: url('./Images/dark.svg');
+    background-repeat: no-repeat;
+    background-position: -10% top ;
+  }
+
+  .App__title {
+    color: $dark-color__secondary;
+  }
 }
