@@ -1,33 +1,34 @@
-$color-dark: #4d4646;
-$color-light: #faf5f5;
+@import '../../colors';
 
 .Navigation {
   box-sizing: border-box;
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
+  padding-bottom: 30px;
   width: 80%;
 
   .button {
     box-sizing: border-box;
+    cursor: pointer;
     font-size: 1.1rem;
     font-weight: 600;
     display: inline-block;
-    padding: 15px 45px;
+    padding: 15px 15px;
     text-align: center;
-    width: 25%;
   }
 
   .choose-your-side {
     box-sizing: border-box;
+    cursor: pointer;
     position: relative;
-    width: 25%;
   }
 
   .choose-your-side__title {
     font-size: 1.1rem;
     font-weight: 600;
     box-sizing: border-box;
-    padding: 15px 45px;
+    padding: 15px 15px;
     text-align: center;
     width: 100%;
   }
@@ -56,37 +57,68 @@ $color-light: #faf5f5;
 
 .App__light-side .Navigation {
   .button {
-    background-color: $color-light;
-    color: $color-dark;
+    background-color: $light-color__primary;
+    color: $light-color__secondary;
+
+    &:hover,
+    &.active {
+      color: $light-color__spotlight;
+    }
   }
 
-  .choose-your-side {
-    background-color: $color-light;
+  .choose-your-side__title {
+    background-color: $light-color__primary;
+    color: $light-color__secondary;
+
+    &:hover {
+      color: $light-color__spotlight;
+    }
   }
 
   .choose-your-side__options {
     > div.side__dark,
     > div.side__light {
-      background-color: $color-light;
+      background-color: $light-color__primary;
+      color: $light-color__secondary;
+
+      &:hover,
+      &.active {
+        color: $light-color__spotlight;
+      }
     }
   }
 }
 
 .App__dark-side .Navigation {
   .button {
-    background-color: $color-dark;
-    color: $color-light;
+    background-color: $dark-color__primary;
+    color: $dark-color__secondary;
+
+    &:hover,
+    &.active {
+      color: $dark-color__spotlight;
+    }
   }
 
-  .choose-your-side {
-    background-color: $color-dark;
-    color: $color-light;
+  .choose-your-side__title {
+    background-color: $dark-color__primary;
+    color: $dark-color__secondary;
+
+    &:hover {
+      color: $dark-color__spotlight;
+    }
   }
 
   .choose-your-side__options {
     > div.side__dark,
     > div.side__light {
-      background-color: $color-dark;
+      background-color: $dark-color__primary;
+      color: $light-color__secondary;
+
+      &:hover,
+      &.active {
+        color: $dark-color__spotlight;
+      }
     }
   }
 }

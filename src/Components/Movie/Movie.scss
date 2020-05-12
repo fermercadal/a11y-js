@@ -1,7 +1,8 @@
+@import '../../colors';
+
 .Movie {
-  background-color: #f5eaea;
   box-sizing: border-box;
-  padding: 15px;
+  text-align: center;
   width: 31%;
 
   .movie__title {
@@ -9,11 +10,16 @@
     font-weight: 600;
   }
 
+  .movie__year {
+    font-size: .8rem;
+    margin-bottom: 30px;
+  }
+
   .movie__poster {
     width: 100%;
 
     img {
-      max-width: 100%;
+      max-width: 60%;
       height: auto6
     }
   }
@@ -21,4 +27,14 @@
   .movie__poster {
     margin-top: 15px;
   }
+}
+
+.App__light-side .movie__title,
+.App__light-side .movie__year {
+  color: $light-color__primary;
+}
+
+.App__dark-side .movie__title,
+.App__dark-side .movie__year {
+  color: $dark-color__primary;
 }
