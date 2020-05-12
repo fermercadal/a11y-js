@@ -26,17 +26,20 @@ class App extends React.Component {
             episode1: {
               title: 'Episode I The Phantom Menace',
               year: '1999',
-              poster: episode1
+              poster: episode1,
+              trailer: 'https://youtu.be/bD7bpG-zDJQ'
             },
             episode2: {
               title: 'Episode II Attack of the Clones',
               year: '2002',
-              poster: episode2
+              poster: episode2,
+              trailer: 'https://youtu.be/gYbW1F_c9eM'
             },
             episode3: {
               title: 'Episode III Revenge of the Sith',
               year: '2005',
-              poster: episode3
+              poster: episode3,
+              trailer: 'https://youtu.be/5UnjrG_N8hU'
             }
           }
           
@@ -47,17 +50,20 @@ class App extends React.Component {
             episode4: {
               title: 'Episode IV A New Hope',
               year: '1977',
-              poster: episode4
+              poster: episode4,
+              trailer: 'https://youtu.be/vZ734NWnAHA'
             },
             episode5: {
               title: 'Episode V The Empire Strikes Back',
               year: '1980',
-              poster: episode5
+              poster: episode5,
+              trailer: 'https://youtu.be/JNwNXF9Y6kY'
             },
             episode6: {
               title: 'Episode VI Return of the Jedi',
               year: '1983',
-              poster: episode6
+              poster: episode6,
+              trailer: 'https://youtu.be/7L8p7_SLzvU'
             }
           }
           
@@ -68,17 +74,20 @@ class App extends React.Component {
             episode7: {
               title: 'Episode VII The Force Awakens',
               year: '2015',
-              poster: episode7
+              poster: episode7,
+              trailer: 'https://youtu.be/sGbxmsDFVnE'
             },
             episode8: {
               title: 'Episode VIII The Last Jedi',
               year: '2017',
-              poster: episode8
+              poster: episode8,
+              trailer: 'https://youtu.be/Q0CbN8sfihY'
             },
             episode9: {
               title: 'Episode IX The Rise of Skywalker',
               year: '2019',
-              poster: episode9
+              poster: episode9,
+              trailer: 'https://youtu.be/8Qn_spdM5Zg'
             }
           }
           

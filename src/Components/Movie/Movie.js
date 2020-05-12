@@ -13,6 +13,10 @@ class Movie extends React.Component {
         <div className="movie__poster">
           <img src={this.props.data.poster}/>
         </div>
+
+        <a className="movie__trailer" target="_blank" href={this.props.data.trailer}>
+          Play trailer
+        </a>
     </div>
     );
   }

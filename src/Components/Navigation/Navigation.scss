@@ -16,11 +16,15 @@
     display: inline-block;
     padding: 15px 15px;
     text-align: center;
+    transition: color .12s ease-in-out;
   }
 
   .choose-your-side {
+    border-right: 1px solid;
     box-sizing: border-box;
     cursor: pointer;
+    margin-right: 30px;
+    padding-right: 60px;
     position: relative;
   }
 
@@ -29,8 +33,26 @@
     font-weight: 600;
     box-sizing: border-box;
     padding: 15px 15px;
+    position: relative;
     text-align: center;
+    transition: color .12s ease-in-out;
     width: 100%;
+
+    &::after {
+      background-color: transparent;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 60% 60%;
+      content: '';
+      display: inline-block;
+      height: 28px;
+      margin-left: 15px;
+      top: calc(50% -14px);
+      position: absolute;
+      transition: background-image .12s ease-in-out;
+      width: 28px;
+
+    }
   }
 
   .choose-your-side__options {
@@ -38,7 +60,7 @@
     display: none;
     left: 0px;
     position: absolute;
-    text-align: center;
+    text-align: left;
     width: 100%;
 
     > div.side__dark,
@@ -47,6 +69,7 @@
       font-weight: 600;
       left: 0;
       padding: 15px;
+      transition: color .12s ease-in-out;
     }
 
     &.active {
@@ -55,6 +78,8 @@
   }
 }
 
+
+/* Light side */
 .App__light-side .Navigation {
   .button {
     background-color: $light-color__primary;
@@ -66,12 +91,24 @@
     }
   }
 
+  .choose-your-side {
+    border-right-color: $light-color__secondary;
+  }
+
   .choose-your-side__title {
     background-color: $light-color__primary;
     color: $light-color__secondary;
 
+    &::after {
+      background-image: url('../../Images/light-arrow.svg');
+    }
+
     &:hover {
       color: $light-color__spotlight;
+
+      &::after {
+        background-image: url('../../Images/light-arrow-spotlight.svg');
+      }
     }
   }
 
@@ -89,6 +126,8 @@
   }
 }
 
+
+/* Dark side */
 .App__dark-side .Navigation {
   .button {
     background-color: $dark-color__primary;
@@ -100,12 +139,24 @@
     }
   }
 
+  .choose-your-side {
+    border-right-color: $dark-color__secondary;
+  }
+
   .choose-your-side__title {
     background-color: $dark-color__primary;
     color: $dark-color__secondary;
 
+    &::after {
+      background-image: url('../../Images/dark-arrow.svg');
+    }
+
     &:hover {
       color: $dark-color__spotlight;
+
+      &::after {
+        background-image: url('../../Images/dark-arrow-spotlight.svg');
+      }
     }
   }
 
