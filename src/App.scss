@@ -19,9 +19,17 @@
 .App__light-side {
   &.App {
     background-color: $light-color__primary;
-    background-image: url('./Images/light.svg');
     background-repeat: no-repeat;
-    background-position: 105% 10% ;
+    background-position: 105% 10%;
+
+    @media screen and (min-width: 768px) {
+      background-image: url('./Images/light.svg');
+    }
+
+    @media screen and (min-width: 1200px) {
+      background-image: url('./Images/light.svg');
+      background-position: 90% 10%;
+    }
   }
 
   .App__title {
@@ -32,9 +40,14 @@
 .App__dark-side {
   &.App {
     background-color: $dark-color__primary;
-    background-image: url('./Images/dark.svg');
+    
     background-repeat: no-repeat;
-    background-position: -10% top ;
+    background-position: 120% top ;
+
+    @media screen and (min-width: 768px) {
+      background-image: url('./Images/dark.svg');
+      background-position: 95% 10%;
+    }
   }
 
   .App__title {

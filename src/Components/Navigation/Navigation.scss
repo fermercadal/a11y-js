@@ -3,10 +3,14 @@
 .Navigation {
   box-sizing: border-box;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: center;
   padding-bottom: 30px;
   width: 80%;
+
+  @media screen and (min-width: 768px) {
+    flex-flow: row wrap;
+  }
 
   .button {
     box-sizing: border-box;
@@ -20,12 +24,17 @@
   }
 
   .choose-your-side {
-    border-right: 1px solid;
+    border-bottom: 1px solid;
     box-sizing: border-box;
     cursor: pointer;
-    margin-right: 30px;
-    padding-right: 60px;
     position: relative;
+
+    @media screen and (min-width: 768px) {
+      border-bottom: 0;
+      border-right: 1px solid;
+      margin-right: 30px;
+      padding-right: 60px;
+    }
   }
 
   .choose-your-side__title {
@@ -56,12 +65,21 @@
   }
 
   .choose-your-side__options {
-    top: 53px;
-    display: none;
+    top: 0px;
     left: 0px;
-    position: absolute;
-    text-align: left;
+    height: 0px;
+    padding-bottom: 15px;
+    position: relative;
+    text-align: center;
+    transition: height .12s ease-in-out;
+    overflow: hidden;
     width: 100%;
+
+    @media screen and (min-width: 768px) {
+      text-align: left;
+      top: 53px;
+      position: absolute;
+    }
 
     > div.side__dark,
     > div.side__light {
@@ -74,6 +92,7 @@
 
     &.active {
       display: inline-block;
+      height: 100px;
     }
   }
 }
@@ -93,6 +112,7 @@
 
   .choose-your-side {
     border-right-color: $light-color__secondary;
+    border-bottom-color: $light-color__secondary;
   }
 
   .choose-your-side__title {
@@ -141,6 +161,7 @@
 
   .choose-your-side {
     border-right-color: $dark-color__secondary;
+    border-bottom-color: $dark-color__secondary;
   }
 
   .choose-your-side__title {

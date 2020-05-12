@@ -3,7 +3,12 @@
 .Movie {
   box-sizing: border-box;
   text-align: center;
-  width: 31%;
+  margin-bottom: 60px;
+  width: 90%;
+
+  @media screen and (min-width: 768px) {
+    width: 31%;
+  }
 
   .movie__title {
     font-size: .9rem;
@@ -19,8 +24,12 @@
     width: 100%;
 
     img {
-      max-width: 60%;
-      height: auto6
+      max-width: 100%;
+      height: auto;
+
+      @media screen and (min-width: 768px) {
+        max-width: 60%;
+      }
     }
   }
 
