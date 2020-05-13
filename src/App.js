@@ -27,18 +27,21 @@ class App extends React.Component {
               title: 'Episode I The Phantom Menace',
               year: '1999',
               poster: episode1,
+              posterDescription: 'The boy Anakin skywalker, young Obi-Wan Kenobi, Qui-Gon Jinn, Queen Padme Admidala, Jar Jar Binks and the droids R2D2 and C3PO, movie poster.',
               trailer: 'https://youtu.be/bD7bpG-zDJQ'
             },
             episode2: {
               title: 'Episode II Attack of the Clones',
               year: '2002',
               poster: episode2,
+              posterDescription: 'Young Anakin Skywalker and Padme Amidala  spotlight.  Jango Fett, Obi-Wan Kenobi, Yoda, Mace Windu and the droids R2D2 and C3PO, movie poster.',
               trailer: 'https://youtu.be/gYbW1F_c9eM'
             },
             episode3: {
               title: 'Episode III Revenge of the Sith',
               year: '2005',
               poster: episode3,
+              posterDescription: 'Anakin Skywalker fighting Obi-Wab Kenobi, surrounded by Yoda, Padme Amidala, Mace Windu and Darth Sidius, Darth Vader in the background, movie poster.',
               trailer: 'https://youtu.be/5UnjrG_N8hU'
             }
           }
@@ -51,18 +54,21 @@ class App extends React.Component {
               title: 'Episode IV A New Hope',
               year: '1977',
               poster: episode4,
+              posterDescription: 'Luke Skywalker holding a laser sword, Leia Organa holding a blaster and droids R2D2 and C3PO in front, Darth Vader and the first Death Star being attacked by rebel ships in the background, movie poster.',
               trailer: 'https://youtu.be/vZ734NWnAHA'
             },
             episode5: {
               title: 'Episode V The Empire Strikes Back',
               year: '1980',
               poster: episode5,
+              posterDescription: 'Luke Skywalker surrounded by Han Solo and Leia Organa, Chewbacca and the droids R2D2 and C3PO. Darth Vader in the background. movie poster.',
               trailer: 'https://youtu.be/JNwNXF9Y6kY'
             },
             episode6: {
               title: 'Episode VI Return of the Jedi',
               year: '1983',
               poster: episode6,
+              posterDescription: 'Luke Skywalker, Han Solo and Leia Organa spotlighted, Darth Vader in the background, movie poster.',
               trailer: 'https://youtu.be/7L8p7_SLzvU'
             }
           }
@@ -75,18 +81,21 @@ class App extends React.Component {
               title: 'Episode VII The Force Awakens',
               year: '2015',
               poster: episode7,
+              posterDescription: '',
               trailer: 'https://youtu.be/sGbxmsDFVnE'
             },
             episode8: {
               title: 'Episode VIII The Last Jedi',
               year: '2017',
               poster: episode8,
+              posterDescription: '',
               trailer: 'https://youtu.be/Q0CbN8sfihY'
             },
             episode9: {
               title: 'Episode IX The Rise of Skywalker',
               year: '2019',
               poster: episode9,
+              posterDescription: '',
               trailer: 'https://youtu.be/8Qn_spdM5Zg'
             }
           }
