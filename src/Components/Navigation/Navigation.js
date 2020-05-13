@@ -19,7 +19,7 @@ class Navigation extends React.Component {
     return (
       <nav className="Navigation">
         <div className="choose-your-side" onClick={() => this.openSelect()}>
-          <div className="choose-your-side__title">Choose your side</div>
+          <div className="choose-your-side__title" aria-label="Choose your side">Choose your side</div>
           <div className="choose-your-side__options">
             <div 
               className={`side__dark ${isDarkSide ? 'active' : ''}`}
@@ -38,19 +38,22 @@ class Navigation extends React.Component {
 
         <div 
           className={`trilogy__link button ${this.props.currentTrilogy === 'prequels' ? 'active' : ''}`}
-          onClick={ this.props.changeTrilogy.bind(this, 'prequels', false) }>
+          onClick={ this.props.changeTrilogy.bind(this, 'prequels', false) }
+          aria-label="Precuels">
             Prequels
         </div>
 
         <div 
           className={`trilogy__link button ${this.props.currentTrilogy === 'originals' ? 'active' : ''}`}
-          onClick={ this.props.changeTrilogy.bind(this, 'originals', false) }>
+          onClick={ this.props.changeTrilogy.bind(this, 'originals', false) }
+          aria-label="Originals">
             Originals
         </div>
 
         <div 
           className={`trilogy__link button ${this.props.currentTrilogy === 'sequels' ? 'active' : ''}`}
-          onClick={ this.props.changeTrilogy.bind(this, 'sequels', false) }>
+          onClick={ this.props.changeTrilogy.bind(this, 'sequels', false) }
+          aria-label="Sequels">
             Sequels
         </div>
       </nav>

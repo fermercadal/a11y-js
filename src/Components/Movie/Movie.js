@@ -11,10 +11,16 @@ class Movie extends React.Component {
         </div>
 
         <div className="movie__poster">
-          <img src={this.props.data.poster}/>
+          <img 
+            src={this.props.data.poster}
+            alt={this.props.data.posterDescription}/>
         </div>
 
-        <a className="movie__trailer" target="_blank" href={this.props.data.trailer}>
+        <a 
+          className="movie__trailer" 
+          target="_blank" 
+          href={this.props.data.trailer}
+          aria-label={`'Play ${ this.props.data.title } trailer'`}>
           Play trailer
         </a>
       </article>
