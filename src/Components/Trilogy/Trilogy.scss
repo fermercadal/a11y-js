@@ -23,23 +23,21 @@
   }
 }
 
-.App__light-side {
-  .Trilogy {
-    background-color: $light-color__secondary;
 
-    .trilogy__title {
-      color: $light-color__primary;
-    }
+.Trilogy.App__light-side {
+  background-color: $light-color__secondary;
 
+  .trilogy__title {
+    color: $light-color__primary;
   }
+
 }
 
-.App__dark-side {
-  .Trilogy {
-    background-color: $dark-color__secondary;
 
-    .trilogy__title {
-      color: $dark-color__primary;
-    }
+.Trilogy.App__dark-side {
+  background-color: $dark-color__secondary;
+
+  .trilogy__title {
+    color: $dark-color__primary;
   }
 }

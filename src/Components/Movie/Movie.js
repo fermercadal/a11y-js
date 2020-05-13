@@ -4,8 +4,8 @@ import './Movie.scss';
 class Movie extends React.Component {
   render() {
     return (
-      <div className="Movie">
-        <div className="movie__title">{ this.props.data.title }</div>
+      <article className="Movie">
+        <h3 className="movie__title">{ this.props.data.title }</h3>
         <div className="movie__year">
           ({ this.props.data.year })
         </div>
@@ -17,7 +17,7 @@ class Movie extends React.Component {
         <a className="movie__trailer" target="_blank" href={this.props.data.trailer}>
           Play trailer
         </a>
-    </div>
+    </article>
     );
   }
 }

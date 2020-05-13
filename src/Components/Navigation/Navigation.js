@@ -17,7 +17,7 @@ class Navigation extends React.Component {
     const isLightSide = this.props.currentSide.lightSide;
 
     return (
-      <div className="Navigation">
+      <nav className="Navigation">
         <div className="choose-your-side" onClick={() => this.openSelect()}>
           <div className="choose-your-side__title">Choose your side</div>
           <div className="choose-your-side__options">
@@ -53,7 +53,7 @@ class Navigation extends React.Component {
           onClick={ this.props.changeTrilogy.bind(this, 'sequels', false) }>
             Sequels
         </div>
-      </div>
+      </nav>
     );
   }
 }
