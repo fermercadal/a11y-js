@@ -136,6 +136,7 @@ class App extends React.Component {
       <>
         <header className={`App ${isDarkSide ? 'App__dark-side' : ''} ${isLightSide ? 'App__light-side' : ''}`}>
           <h1 className="App__title">A11y JS</h1>
+          
           <Navigation 
             changeSide={ this.changeSide } 
             changeTrilogy={ this.changeTrilogy }

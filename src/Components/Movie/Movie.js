@@ -17,7 +17,7 @@ class Movie extends React.Component {
         <a className="movie__trailer" target="_blank" href={this.props.data.trailer}>
           Play trailer
         </a>
-    </article>
+      </article>
     );
   }
 }
