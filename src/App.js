@@ -133,18 +133,24 @@ class App extends React.Component {
     const isLightSide = this.state.Side.lightSide;
 
     return (
-      <div className={`App ${isDarkSide ? 'App__dark-side' : ''} ${isLightSide ? 'App__light-side' : ''}`}>
-        <div className="App__title">A11y JS</div>
+      <>
+        <header className={`App ${isDarkSide ? 'App__dark-side' : ''} ${isLightSide ? 'App__light-side' : ''}`}>
+          <h1 className="App__title">A11y JS</h1>
+          
+          <Navigation 
+            changeSide={ this.changeSide } 
+            changeTrilogy={ this.changeTrilogy }
+            currentTrilogy={ this.state.currentTrilogy }
+            currentSide={ this.state.Side }
+            />
+        </header>
 
-        <Navigation 
-          changeSide={ this.changeSide } 
-          changeTrilogy={ this.changeTrilogy }
-          currentTrilogy={ this.state.currentTrilogy }
+        <Trilogy 
+          series={ this.state.currentTrilogy } 
+          saga={ this.state.saga }
           currentSide={ this.state.Side }
           />
-
-        <Trilogy series={ this.state.currentTrilogy } saga={ this.state.saga }/>
-      </div>
+      </>
     );
   }
 }
