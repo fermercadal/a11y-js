@@ -26,6 +26,9 @@ yarn start
 * Add Alt text 
 * Fix Labeling using ARIA
 
+### step3
+* Make custom buttons focusable
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
