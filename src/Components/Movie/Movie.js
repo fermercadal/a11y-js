@@ -18,7 +18,8 @@ class Movie extends React.Component {
 
         <a 
           className="movie__trailer" 
-          target="_blank" 
+          target="_blank"
+          rel="noopener noreferrer"
           href={this.props.data.trailer}
           aria-label={`'Play ${ this.props.data.title } trailer'`}>
           Play trailer
