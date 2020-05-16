@@ -3,9 +3,6 @@ import Movie from '../Movie/Movie';
 import './Trilogy.scss';
 
 class Trilogy extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     const saga = this.props.saga;
