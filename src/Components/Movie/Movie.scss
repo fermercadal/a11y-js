@@ -59,6 +59,12 @@
       top: calc(50% - 15px);
       width: 30px;
     }
+
+    &:focus {
+      outline-style: dashed;
+      outline-offset: 4px;
+      outline-width: 2px;
+    }
   }
 }
 
@@ -84,6 +90,10 @@
       background-image: url('../../Images/play-light-spotlight.svg')
     }
   }
+
+  &:focus {
+    outline-color: $light-color__primary;
+  }
 }
 
 
@@ -107,5 +117,9 @@
     &::before {
       background-image: url('../../Images/play-dark-spotlight.svg');
     }
+  }
+
+  &:focus {
+    outline-color: $dark-color__primary;
   }
 }
