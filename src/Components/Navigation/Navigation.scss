@@ -18,9 +18,15 @@
     font-size: 1.1rem;
     font-weight: 600;
     display: inline-block;
-    padding: 15px 15px;
+    margin: 0 5px;
+    padding: 15px;
     text-align: center;
     transition: color .12s ease-in-out;
+
+    &:focus {     
+      outline-style: dashed;
+      outline-width: 2px;
+    }
   }
 
   .choose-your-side {
@@ -62,13 +68,17 @@
       transition: background-image .12s ease-in-out;
       width: 28px;
     }
+
+    &:focus {     
+      outline-style: dashed;
+      outline-width: 2px;
+    }
   }
 
   .choose-your-side__options {
     top: 0px;
     left: 0px;
     height: 0px;
-    padding-bottom: 15px;
     position: relative;
     text-align: center;
     transition: height .12s ease-in-out;
@@ -94,6 +104,7 @@
     &.active {
       display: inline-block;
       height: 100px;
+      padding-bottom: 15px;
     }
   }
 }
@@ -108,6 +119,10 @@
     &:hover,
     &.active {
       color: $light-color__spotlight;
+    }
+
+    &:focus {
+      outline-color: $light-color__spotlight;
     }
   }
 
@@ -130,6 +145,10 @@
       &::after {
         background-image: url('../../Images/light-arrow-spotlight.svg');
       }
+    }
+
+    &:focus {
+      outline-color: $light-color__spotlight;
     }
   }
 
@@ -158,6 +177,10 @@
     &.active {
       color: $dark-color__spotlight;
     }
+
+    &:focus {
+      outline-color: $dark-color__spotlight;
+    }
   }
 
   .choose-your-side {
@@ -179,6 +202,10 @@
       &::after {
         background-image: url('../../Images/dark-arrow-spotlight.svg');
       }
+    }
+
+    &:focus {
+      outline-color: $dark-color__spotlight;
     }
   }
 
