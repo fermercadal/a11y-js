@@ -113,6 +113,20 @@ class App extends React.Component {
     this.changeTrilogy = this.changeTrilogy.bind(this);
   }
 
+  componentDidMount() {
+    const buttons = document.querySelectorAll('.button');
+    
+    buttons.forEach((button) => {
+      button.addEventListener('keypress', (e) => {
+        if(e.charCode ===  13 || e.charCode ===  32) {
+          e.preventDefault();
+          this.changeTrilogy(button.getAttribute('aria-label'));
+        }
+      })
+    });
+
+  } 
+
   changeSide(side) {
     if(side === 'darkSide') {
       this.setState({
