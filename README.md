@@ -28,7 +28,12 @@ yarn start
 
 ### step3
 * Make custom buttons focusable
-* Make custom buttons operable by Enter/Spacebar key press
+* Make custom buttons operable by keyboard
+
+### step4
+* Make custom select operable by keyboard
+* Fix hidden buttons focus bug
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
