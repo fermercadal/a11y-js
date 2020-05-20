@@ -114,17 +114,16 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const buttons = document.querySelectorAll('.button');
-    
-    buttons.forEach((button) => {
+    const customButtons = document.querySelectorAll('.button');
+      
+    customButtons.forEach((button) => {
       button.addEventListener('keypress', (e) => {
         if(e.charCode ===  13 || e.charCode ===  32) {
           e.preventDefault();
           this.changeTrilogy(button.getAttribute('aria-label'));
         }
-      })
+      });
     });
-
   } 
 
   changeSide(side) {

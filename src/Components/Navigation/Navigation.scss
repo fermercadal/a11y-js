@@ -18,7 +18,7 @@
     font-size: 1.1rem;
     font-weight: 600;
     display: inline-block;
-    margin: 0 5px;
+    margin: 2px 5px;
     padding: 15px;
     text-align: center;
     transition: color .12s ease-in-out;
@@ -76,7 +76,7 @@
   }
 
   .choose-your-side__options {
-    top: 0px;
+    top: 2px;
     left: 0px;
     height: 0px;
     position: relative;
@@ -87,7 +87,7 @@
 
     @media screen and (min-width: 768px) {
       text-align: left;
-      top: 53px;
+      top: 55px;
       position: absolute;
       width: calc(100% - 30px);
     }
@@ -97,8 +97,14 @@
       font-size: 1.1rem;
       font-weight: 600;
       left: 0;
+      margin: 2px 0;
       padding: 15px;
       transition: color .12s ease-in-out;
+
+      &:focus {     
+        outline-style: dashed;
+        outline-width: 2px;
+      }
     }
 
     &.active {
@@ -153,6 +159,8 @@
   }
 
   .choose-your-side__options {
+    background-color: $light-color__primary;
+
     > div.side__dark,
     > div.side__light {
       background-color: $light-color__primary;
@@ -161,6 +169,10 @@
       &:hover,
       &.active {
         color: $light-color__spotlight;
+      }
+
+      &:focus {
+        outline-color: $light-color__spotlight;
       }
     }
   }
@@ -210,6 +222,8 @@
   }
 
   .choose-your-side__options {
+    background-color: $dark-color__primary;
+
     > div.side__dark,
     > div.side__light {
       background-color: $dark-color__primary;
@@ -218,6 +232,10 @@
       &:hover,
       &.active {
         color: $dark-color__spotlight;
+      }
+
+      &:focus {
+        outline-color: $dark-color__spotlight;
       }
     }
   }
