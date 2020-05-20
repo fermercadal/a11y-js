@@ -71,7 +71,7 @@ class Navigation extends React.Component {
             <div
               role="option"
               aria-label="Dark side"
-              aria-selected={`${isDarkSide  ? true : false}`}
+              aria-selected={isDarkSide  ? true : false}
               className={`side__dark ${isDarkSide ? 'active' : ''}`}
               tabIndex="0 "
               onClick={() => this.props.changeSide('darkSide')}>
@@ -81,7 +81,7 @@ class Navigation extends React.Component {
             <div
               role="option"
               aria-label="Light side"
-              aria-selected={`${isLightSide  ? true : false}`}
+              aria-selected={isLightSide  ? true : false}
               className={`side__light ${isLightSide  ? 'active' : ''}`}
               tabIndex="0 "
               onClick={() => this.props.changeSide  ('lightSide')}>
@@ -94,7 +94,7 @@ class Navigation extends React.Component {
         <div 
           role="button"
           aria-label="prequels"
-          aria-pressed={`${this.props.currentTrilogy === 'prequels' ? true : false}`}
+          aria-pressed={this.props.currentTrilogy === 'prequels' ? true : false}
           className={`trilogy__link button ${this.props.currentTrilogy === 'prequels' ? 'active' : ''}`}
           tabIndex="0 "
           onClick={ () => this.props.changeTrilogy('prequels') }>
@@ -104,7 +104,7 @@ class Navigation extends React.Component {
         <div 
           role="button"
           aria-label="originals"
-          aria-pressed={`${this.props.currentTrilogy === 'originals' ? true : false}`}
+          aria-pressed={this.props.currentTrilogy === 'originals' ? true : false}
           className={`trilogy__link button ${this.props.currentTrilogy === 'originals' ? 'active' : ''}`}
           tabIndex="0 "
           onClick={ () => this.props.changeTrilogy('originals') }>
@@ -114,7 +114,7 @@ class Navigation extends React.Component {
         <div 
           role="button"
           aria-label="sequels"
-          aria-pressed={`${this.props.currentTrilogy === 'sequels' ? true : false}`}
+          aria-pressed={this.props.currentTrilogy === 'sequels' ? true : false}
           className={`trilogy__link button ${this.props.currentTrilogy === 'sequels' ? 'active' : ''}`}
           tabIndex="0 "
           onClick={ () => this.props.changeTrilogy('sequels') }>
