@@ -34,6 +34,9 @@ yarn start
 * Make custom select operable by keyboard
 * Fix hidden buttons focus bug
 
+### step5
+* Add ARIA role, label and state
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

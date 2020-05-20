@@ -38,12 +38,17 @@ class Navigation extends React.Component {
     
     if(customSelect) {
       const customSelectOptions = customSelect.querySelectorAll('.choose-your-side__options > div');
-      const customSelectState = customSelect.classList.contains('active') ? -1 : 0;
+
+      const customSelectState = {
+        tabindex: customSelect.classList.contains('active') ? -1 : 0,
+        expanded: customSelect.classList.contains('active') ? false : true
+      }
 
       customSelect.classList.toggle('active');
+      target.setAttribute('aria-expanded', customSelectState.expanded);
 
       customSelectOptions.forEach((option) => {
-        option.setAttribute('tabindex', customSelectState);
+        option.setAttribute('tabindex', customSelectState.tabindex);
       });
     }
   }
@@ -54,17 +59,29 @@ class Navigation extends React.Component {
 
     return (
       <nav className="Navigation">
-        <div className="choose-your-side" onClick={(e) => this.toggleSelect(e.target)}>
-          <div className="choose-your-side__title" aria-label="Choose your side" tabIndex="0 ">Choose your side</div>
+        <div role="listbox" className="choose-your-side" onClick={(e) => this.toggleSelect(e.target)}>
+          <div 
+            aria-label="Choose your side"
+            aria-expanded="false"
+            className="choose-your-side__title"  
+            tabIndex="0 ">
+              Choose your side
+          </div>
           <div className="choose-your-side__options">
-            <div 
+            <div
+              role="option"
+              aria-label="Dark side"
+              aria-selected={isDarkSide  ? true : false}
               className={`side__dark ${isDarkSide ? 'active' : ''}`}
               tabIndex="0 "
               onClick={() => this.props.changeSide('darkSide')}>
                 Dark Side
             </div>
 
-            <div 
+            <div
+              role="option"
+              aria-label="Light side"
+              aria-selected={isLightSide  ? true : false}
               className={`side__light ${isLightSide  ? 'active' : ''}`}
               tabIndex="0 "
               onClick={() => this.props.changeSide  ('lightSide')}>
@@ -75,26 +92,32 @@ class Navigation extends React.Component {
 
 
         <div 
+          role="button"
+          aria-label="prequels"
+          aria-pressed={this.props.currentTrilogy === 'prequels' ? true : false}
           className={`trilogy__link button ${this.props.currentTrilogy === 'prequels' ? 'active' : ''}`}
           tabIndex="0 "
-          onClick={ () => this.props.changeTrilogy('prequels') }
-          aria-label="prequels">
+          onClick={ () => this.props.changeTrilogy('prequels') }>
             Prequels
         </div>
 
         <div 
+          role="button"
+          aria-label="originals"
+          aria-pressed={this.props.currentTrilogy === 'originals' ? true : false}
           className={`trilogy__link button ${this.props.currentTrilogy === 'originals' ? 'active' : ''}`}
           tabIndex="0 "
-          onClick={ () => this.props.changeTrilogy('originals') }
-          aria-label="originals">
+          onClick={ () => this.props.changeTrilogy('originals') }>
             Originals
         </div>
 
         <div 
+          role="button"
+          aria-label="sequels"
+          aria-pressed={this.props.currentTrilogy === 'sequels' ? true : false}
           className={`trilogy__link button ${this.props.currentTrilogy === 'sequels' ? 'active' : ''}`}
           tabIndex="0 "
-          onClick={ () => this.props.changeTrilogy('sequels') }
-          aria-label="sequels">
+          onClick={ () => this.props.changeTrilogy('sequels') }>
             Sequels
         </div>
       </nav>
