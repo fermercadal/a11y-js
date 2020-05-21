@@ -81,21 +81,21 @@ class App extends React.Component {
               title: 'Episode VII The Force Awakens',
               year: '2015',
               poster: episode7,
-              posterDescription: '',
+              posterDescription: 'Rei and Kylon Ren in the background spotlight,  surrounded by Fin, Cheewbaca, Han Solo and Leia Organa, Poe Dameron, Maz Kanata, the droids R2D2, C3PO, and BB8, and the First Order troops, movie poster.',
               trailer: 'https://youtu.be/sGbxmsDFVnE'
             },
             episode8: {
               title: 'Episode VIII The Last Jedi',
               year: '2017',
               poster: episode8,
-              posterDescription: '',
+              posterDescription: 'Old Luke Skywalker on top, Rei and Kylo Ren below, surrounded by Leia Organa, Finn, Poe Dameron, Chewbacca, the droids R2D2, C3PO and BB8, and the First Order troops, movie poster.',
               trailer: 'https://youtu.be/Q0CbN8sfihY'
             },
             episode9: {
               title: 'Episode IX The Rise of Skywalker',
               year: '2019',
               poster: episode9,
-              posterDescription: '',
+              posterDescription: 'Rei spotlight, Kilo Ren and the Millennium Falcon in the background surrounded by Finn, Poe Dameron, Chewbacca, Lando Calrissian, Zorii Bliss, Jannah and the droids R2D2, C3PO, BB8 and D-8. Rei fighting Kylo Ren on front, movie poster.',
               trailer: 'https://youtu.be/8Qn_spdM5Zg'
             }
           }
